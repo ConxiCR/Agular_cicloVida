@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CICLOVIDA';
+  mainTexto:string;
+
+  constructor(){
+    this.mainTexto = 'texto des del padre';
+  }
+  ngOnInit(){
+    let cont = 0;
+    setInterval(() =>{
+      this.mainTexto = `Texto ${cont++}`;
+    }, 2000);
+
+  }
+
+
+
 }
